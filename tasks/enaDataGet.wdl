@@ -27,5 +27,6 @@ task enaDataGet {
 
 	output {
 		Array[File] fastqs = glob("*.fastq.gz")
+		String sample_out = sample
 	}
 }
