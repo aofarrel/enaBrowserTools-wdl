@@ -14,6 +14,7 @@ task enaDataGet {
 
 	command <<<
 	enaDataGet ~{sample}
+	ls -lhaR > workdir.txt
 	>>>
 
 	runtime {
@@ -28,5 +29,6 @@ task enaDataGet {
 	output {
 		Array[File] fastqs = glob("*.fastq.gz")
 		String sample_out = sample
+		File workdir = "workdir.txt"
 	}
 }
