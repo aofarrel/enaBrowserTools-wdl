@@ -27,7 +27,7 @@ task enaDataGet {
 	}
 
 	output {
-		Array[File] fastqs = glob("*.fastq.gz")
+		Array[File] fastqs = glob("~{sample}/*.fastq.gz")
 		String sample_out = sample
 		File workdir = "workdir.txt"
 	}
